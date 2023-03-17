@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -fgnu-tm $CFILE
+gcc -S -fgnu-tm $CFILE
