@@ -32,7 +32,7 @@ int main(void)
 	}
 	if (lastdigit > 5)
 	{
-		printf(" and is greater than 5\n");
+		printf("and is greater than 5\n");
 	}
 	if (lastdigit == 0)
 	{
