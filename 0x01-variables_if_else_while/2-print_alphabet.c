@@ -4,12 +4,13 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	int ch;
+
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		printf("%c ", ch);
 	}
-	return 0;
+	return (0);
 }
