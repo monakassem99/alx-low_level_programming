@@ -12,7 +12,6 @@ int main(void)
 	{
 		putchar (ch);
 		putchar ('\n');
-		getch ();
 	}
 	return (0);
 }
