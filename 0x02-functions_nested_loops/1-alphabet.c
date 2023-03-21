@@ -1,5 +1,5 @@
+#include "main"
 
-#include "maiin"
 /**
  * print_alphabet - prints the in lowercase, followed by a new line.
  */
