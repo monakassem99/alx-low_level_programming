@@ -7,7 +7,9 @@
  * Return: Always 0.
  */
 
-void print_alphabet(void) /*print alphabet*/
+void print_alphabet(void) 
+
+/*print alphabet*/
 {
 	int ch;
 
