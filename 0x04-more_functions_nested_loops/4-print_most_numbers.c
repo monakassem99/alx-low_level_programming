@@ -2,8 +2,8 @@
 
 /**
  * print_most_numbers - print 0 -9
- * 		from 2 and 4 and you can
- * 		only use _putchar twice
+ *		from 2 and 4 and you can
+ *		only use _putchar twice
  * Return : Always 0 (success)
  */
 void print_most_numbers(void)
