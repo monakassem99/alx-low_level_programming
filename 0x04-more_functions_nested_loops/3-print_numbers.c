@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - print 0 - 9
- * numbers range 0 - 9
+ * numbers range
  * return 0
  */
 
