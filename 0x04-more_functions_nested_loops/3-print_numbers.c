@@ -2,17 +2,18 @@
 
 /**
  * print_numbers - print 0 - 9
- * numbers range
- * return 0
+ * 		only using _putchar twice
+ * Return: Always 0 (success)
  */
 
 void print_numbers(void)
 {
-	int x = 0;
+	int n = 0;
 
 	do {
-		_putchar(x + 48);
-		x++;
-	} while (x >= 0 && x <= 9)
-	_putchar('\n');
+	
+		_putchar(n + 48);
+		n++;
+	} while (n >= 0 && n <= 9);
+	_putchar('\n')
 }
