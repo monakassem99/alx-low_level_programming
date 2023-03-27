@@ -2,5 +2,5 @@
 
 int _strlen(char *s)
 {
-	return (str);
+	return (*s);
 }
