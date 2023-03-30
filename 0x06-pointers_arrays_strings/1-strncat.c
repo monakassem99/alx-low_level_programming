@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strcat - concatenate 2 strings
+ * _strncat - concatenate 2 strings
  * @dest: destination string
  * @src: the source string
  * @n: number oof characters
- * return : concatenated strings
+ * Return: concatenated strings
  */
 
 char *_strncat(char *dest, char *src, int n)
