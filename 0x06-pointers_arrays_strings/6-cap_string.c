@@ -27,6 +27,12 @@ int isdelimiter(char c)
 	return (0);
 }
 
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: input string
+ * Return: string with capitalized words
+ */
+
 char *cap_string(char *s)
 {
 	char *ptr = s;
