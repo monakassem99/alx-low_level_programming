@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * print_diagonal - prints a diagonal where
+ *		n is number of /
+ *@n: the user input
+ *
+ * return: nothing
+ */
+
 void print_diagonal(int n)
 {
 	int x, y;
