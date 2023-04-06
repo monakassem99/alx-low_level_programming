@@ -10,18 +10,19 @@
 
 int _pow_recursion(int x, int y)
 {
-	int result = 1;
-	int i;
+	int z = x;
 
-	for (i = 0; i < y; i++)
+	if (y == 0)
 	{
-		result *= x;
+		return (1);
 	}
 
-	if (y < 0)
+	else if (y < 0)
 	{
 		return (-1);
 	}
 
-	return (result);
+	z = z * _pow_recursion(x, y - 1);
+
+	return (z);
 }
