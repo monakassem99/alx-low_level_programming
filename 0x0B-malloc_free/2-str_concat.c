@@ -22,7 +22,7 @@ int _strlen(char *s)
  * Return: pointer
  */
 
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	int sz1, sz2, x;
 	char *ch;
