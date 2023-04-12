@@ -37,7 +37,7 @@ char *argstostr(int ac, char **av)
 	if (ch == 0)
 		return (NULL);
 
-	for (x = 0; x < nc; x++)
+	for (x = 0; x < ac; x++)
 	{
 		for (y = 0; av[x][y] != '\0'; y++, cmpt++)
 			ch[cmpt] = av[x][y];
