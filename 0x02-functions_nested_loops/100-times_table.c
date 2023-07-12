@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.h"
 
 /*
  * print_times_table - prints n times table according to the input value
