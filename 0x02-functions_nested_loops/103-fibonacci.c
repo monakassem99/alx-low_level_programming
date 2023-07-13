@@ -5,7 +5,7 @@
 int main(void)
 {
 	int i;
-	long long int fibb[50];
+	long int fibb[50];
 	long int sum;
 
 	sum = 0;
