@@ -1,13 +1,10 @@
 #include "main.h"
 
-/*
+/**
  * print_times_table - prints n times table according to the input value
  * of the user since it is less than 15
- * n: variable to be printed
- * x: variable
- * y: variable
- * z: variable
- * return: ...
+ * @n: variable
+ * Return: ...
  */
 
 void print_times_table(int n)

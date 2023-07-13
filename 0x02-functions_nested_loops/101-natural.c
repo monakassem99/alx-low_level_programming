@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*
- * natural: prints sum of multiplies of 3 and 5 below 1024
- * return: 0
+/**
+ * main - prints sum of multiplies of 3 and 5 below 1024
+ * Return: 0
  */
 
 int main(void)
