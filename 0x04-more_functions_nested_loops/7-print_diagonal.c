@@ -16,10 +16,15 @@ void print_diagonal(int n)
 	{
 		for (y = 1; y <= x; y++)
 		{
+			_putchar(' ');
 			if (y == x)
+			{
 				_putchar('\\');
+			}
 			else
+			{
 				_putchar(' ');
+			}
 		}
 			_putchar('\n');
 	}
