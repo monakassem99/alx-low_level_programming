@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - prints largest prime factor of a number
+ *
+ * Return: always 0
+ */
+
 int main(void)
 {
 	long int n = 612852475143;
@@ -30,5 +36,6 @@ int main(void)
 
 	printf("%ld\n", largest_factor);
 
-	return 0;
+	return (0);
 }
+
