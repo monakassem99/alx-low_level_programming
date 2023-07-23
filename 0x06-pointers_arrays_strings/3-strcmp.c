@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * _strlen - prints the lenght of given string
+ *
+ * @s: the pointer of string
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		len++;
+	}
+	return (len);
+}
+
+/**
  * _strcmp - compares 2 strings
  * @s1: string 1
  * @s2: string 2
@@ -9,17 +28,8 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int equal = 0;
-
-	while (*s1)
-	{
-		if (*s1 != *s2)
-		{
-			equal = ((int)*s1 - 48) - ((int)*s2 - 48);
-				break;
-		}
-		s1++;
-		s2++;
-	}
-	return (equal);
+	for (; *s1 == *s2; s1++, s2++)
+		if (*s1 == '\0')
+			return (0);
+	return (*(unsigned char *)s1 < *(unsigned char *)s2 ? -15 : 15);
 }
