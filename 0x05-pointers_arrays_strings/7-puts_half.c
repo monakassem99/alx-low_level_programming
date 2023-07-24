@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.h"
 
 /**
  * _strlen - prints the lenght of given string
@@ -32,7 +33,7 @@ void puts_half(char *str)
 
 	if (n % 2 == 0)
 	{
-		for (i = n / 2; i <= n; i++)
+		for (i = n / 2; i < n; i++)
 		{
 			_putchar(str[i]);
 		}
@@ -41,11 +42,10 @@ void puts_half(char *str)
 
 	else
 	{
-		for (i = (n - 1) / 2; i <= n - 1; i++)
+		for (i = (n - 1) / 2; i < n - 1; i++)
 		{
-			_putchar(str[i]);
+			_putchar(str[i + 1]);
 		}
 		_putchar('\n');
 	}
 }
-
