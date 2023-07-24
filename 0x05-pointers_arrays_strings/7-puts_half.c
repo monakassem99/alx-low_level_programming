@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.h"
 
 /**
  * _strlen - prints the lenght of given string
