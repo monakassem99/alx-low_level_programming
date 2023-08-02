@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/mona/ALX/task_practice/0x08-recursion",
-      "program": "/home/mona/ALX/task_practice/0x08-recursion/build/Debug/outDebug",
+      "cwd": "/home/mona/ALX/task_practice/alx-low_level_programming/0x08-recursion",
+      "program": "/home/mona/ALX/task_practice/alx-low_level_programming/0x08-recursion/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
