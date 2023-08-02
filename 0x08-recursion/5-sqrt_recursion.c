@@ -7,10 +7,10 @@
  * Return: the natural square root of n if it exists, otherwise -1
  */
 
-int _sqrt_recursion_helper(int n, int start, int end)
+int _sqrt_recursion_helper(long int n, long int start, long int end)
 {
-	int mid;
-	int square;
+	long int mid;
+	long int square;
 
 	mid = (start + end) / 2;
 	square = mid * mid;
