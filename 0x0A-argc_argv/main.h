@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <libgen.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int _putchar(char c);
 int main(int argc, char *argv[]);
-void mul(int x, int y);
 
 #endif
