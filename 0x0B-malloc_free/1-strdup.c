@@ -17,5 +17,9 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	return ((char *)memcpy(new, str, len));
 }
