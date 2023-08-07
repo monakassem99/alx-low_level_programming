@@ -10,16 +10,18 @@
 
 char *_strdup(char *str)
 {
-	size_t len = strlen(str) + 1;
-	void *new = malloc(len);
+	size_t length = strlen(str);
+	char *duplicate = (char *)malloc((length + 1) * sizeof(char));
 
-	if (new == NULL)
-	{
-		return (NULL);
-	}
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	return ((char *)memcpy(new, str, len));
+
+	if (duplicate != NULL)
+	{
+		strcpy(duplicate, str);
+	}
+
+	return (duplicate);
 }
