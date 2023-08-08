@@ -11,17 +11,27 @@
 char *_strdup(char *str)
 {
 
-	size_t length = strlen(str);
-	char *duplicate = (char *)malloc((length + 1) * sizeof(char));
+	char *ar;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	if (duplicate == NULL)
+	while (str[i])
+		i++;
+
+	ar = malloc(sizeof(char) * (i + 1));
+
+	if (ar == NULL)
 		return (NULL);
 
-	strcpy(duplicate, str);
+	while (str[j])
+	{
+		ar[j] = str[j];
+		j++;
+	}
 
-	free(duplicate);
-	return (duplicate);
+	ar[j + 1] = 0;
+	return (ar);
 }
