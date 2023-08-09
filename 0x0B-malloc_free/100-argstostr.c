@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * argstostr -  concatenates all the arguments of your program.
+ * @ac: first arg
+ * @av: second arg
+ * Return:  pointer to a new string
+ */
+
 char *argstostr(int ac, char **av)
 {
 	int i;
@@ -25,6 +32,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		size_t arg_length = strlen(av[i]);
+
 		strcpy(result + index, av[i]);
 		index += arg_length;
 		result[index++] = '\n';
