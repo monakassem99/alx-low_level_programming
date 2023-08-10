@@ -11,25 +11,42 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
-	size_t totalLen = len1 + n;
-	char *concatenated = (char *)malloc((totalLen + 1) * sizeof(char));
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n >= len2)
-		n = len2;
+	while (s1[i])
+		i++;
 
-	if (concatenated == NULL)
-	{
-		fprintf(stderr, "malloc failed\n");
+	while (s2[k])
+		k++;
+
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
 		return (NULL);
+
+	k = 0;
+	while (j < l)
+	{
+		if (j <= i)
+			str[j] = s1[j];
+
+		if (j >= i)
+		{
+			str[j] = s2[k];
+			k++;
+		}
+		j++;
 	}
-	strcpy(concatenated, s1);
-	strncat(concatenated, s2, n);
-	return (concatenated);
+	str[j] = '\0';
+	return (str);
 }
