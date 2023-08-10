@@ -20,6 +20,26 @@ int _strlen(char *s)
 }
 
 /**
+ * *_memcpy - copy memory area
+ * @dest: memory area
+ * @src: source
+ * @n: length of source
+ *
+ * Return: dest
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int fll;
+
+	for (fll = 0; fll < n; fll++)
+	{
+		dest[fll] = src[fll];
+	}
+	return (dest);
+}
+
+/**
  * string_nconcat - concatenates two strings.
  * @s1: first string
  * @s2: second string
@@ -29,40 +49,43 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, len_1, len_2, size;
-	char *fin_str;
+	unsigned int len_1 = 0, len_2 = 0, size = 0;
+	char *fin_str = NULL;
 
-	len_1 = _strlen(s1);
-	len_2 = _strlen(s2);
-	size = len_1 + len_2;
+	size = len_1 + len_2 + 1;
 	fin_str = malloc(size);
-
 	if (s1 == NULL)
 	{
 		s1 = "";
 	}
-
+	if (s1 != NULL)
+	{
+		len_1 = _strlen(s1);
+	}
 	if (s2 == NULL)
 	{
 		s2 = "";
 	}
-
-	for (i = 0; i < len_1; i++)
+	if (s2 != NULL)
 	{
-		fin_str[i] = s1[i];
+		len_2 = _strlen(s2);
 	}
-
-	for (i = 0; i < n; i++)
+	if (n >= len_2)
 	{
-		fin_str[len_1 + i] = s2[i];
+		n = len_2;
 	}
-
-	fin_str[size - 1] = '\0';
-
 	if (fin_str == NULL)
 	{
 		return (NULL);
 	}
-
+	if (s1 != NULL)
+	{
+		_memcpy(fin_str, s1, len_1);
+	}
+	if (s2 != NULL)
+	{
+		_memcpy(fin_str + len_1, s2, n);
+	}
+	fin_str[len_1 + n] = '\0';
 	return (fin_str);
 }
