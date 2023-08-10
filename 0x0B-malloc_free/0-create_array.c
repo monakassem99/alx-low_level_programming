@@ -10,8 +10,8 @@
 
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i;
-	char *arr = malloc(size * sizeof(char));
+	unsigned int i;							 /*we used unsigned bec size is unsigned too*/
+	char *arr = malloc(size * sizeof(char)); /*allocate memory for the array*/
 
 	if (size == 0)
 	{
@@ -25,7 +25,7 @@ char *create_array(unsigned int size, char c)
 
 	for (i = 0; i < size; i++)
 	{
-		arr[i] = c;
+		arr[i] = c; /*intialize every element with the specifiec character*/
 	}
 	return (arr);
 }
