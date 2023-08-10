@@ -12,4 +12,5 @@ int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int is_digit(char *s);
 int _strlen(char *s);
+char *_memcpy(char *dest, char *src, unsigned int n);
 #endif

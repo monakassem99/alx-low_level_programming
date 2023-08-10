@@ -54,17 +54,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	size = len_1 + len_2 + 1;
 	fin_str = malloc(size);
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+
 	if (s1 != NULL)
 	{
 		len_1 = _strlen(s1);
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
 	}
 	if (s2 != NULL)
 	{
