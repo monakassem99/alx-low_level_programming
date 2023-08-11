@@ -10,8 +10,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int len, i;
-
-	char *arr;
+	char *arr; /*char is used bec allocated memory for array of characters*/
 
 	if (nmemb == 0)
 	{
@@ -30,7 +29,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	for (i = 0; i < len; i++)
 	{
-		arr[i] = 0;
+		arr[i] = 0; /*to set memory to zero, as calloc did*/
 	}
 
 	return (arr);
