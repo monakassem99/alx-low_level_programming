@@ -29,12 +29,8 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, len_1, len_2, size;
+	unsigned int i, len_1 = 0, len_2 = 0, size;
 	char *fin_str;
-
-	len_1 = _strlen(s1);
-	len_2 = _strlen(s2);
-	size = len_1 + len_2 + 1;
 
 	if (s1 == NULL)
 	{
@@ -44,15 +40,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
+
+	len_1 = _strlen(s1);
+	len_2 = _strlen(s2);
+	size = len_1 + len_2 + 1;
 	if (n >= len_2)
 	{
-		size = len_1 + len_2;
+		size = len_1 + len_2 + 1;
 	}
 	else
 	{
-		size = len_1 + n;
+		size = len_1 + n + 1;
 	}
-	fin_str = malloc(size * sizeof(char) + 1);
+	fin_str = malloc(size * sizeof(char));
 	if (fin_str == NULL)
 	{
 		return (NULL);
