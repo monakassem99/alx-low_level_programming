@@ -32,18 +32,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, len_1 = 0, len_2 = 0, size;
 	char *fin_str;
 
-	if (s1 == NULL)
+	if (s1 != NULL)
 	{
-		s1 = "";
+		len_1 = strlen(s1);
 	}
-	if (s2 == NULL)
+	if (s2 != NULL)
 	{
-		s2 = "";
+		len_2 = strlen(s2);
 	}
-
-	len_1 = _strlen(s1);
-	len_2 = _strlen(s2);
-	size = len_1 + len_2 + 1;
 	if (n >= len_2)
 	{
 		size = len_1 + len_2 + 1;
