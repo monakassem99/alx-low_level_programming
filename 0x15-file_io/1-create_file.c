@@ -1,21 +1,37 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
+#include "_strlen.c"
 
-#define READ_ERR "Error: Can't read from file %s\n"
-#define WRITE_ERR "Error: Can't write to %s\n"
+/**
+ * create_file - create file with rw permissions and write into it exclusively
+ * @filename: name of file
+ * @text_content: content to write into file
+ *
+ * Return: 1, -1 if error
+ */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+int create_file(const char *filename, char *text_content)
+{
+	int fd;
+	int n_write;
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+	if (!filename)
+		return (-1);
 
-#include <elf.h>
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (fd == -1)
+		return (-1);
 
-ssize_t read_textfile(const char *filename, size_t letters);
-int create_file(const char *filename, char *text_content);
-int append_text_to_file(const char *filename, char *text_content);
-
-#endif
+	if (!text_content)
+	{
+		close(fd);
+		return (1);
+	}
+	n_write = write(fd, text_content, _strlen(text_content));
+	if (n_write == -1 || n_write != _strlen(text_content))
+	{
+		close(fd);
+		return (-1);
+	}
+	close(fd);
+	return (1);
+}
